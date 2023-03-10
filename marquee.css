@@ -1,0 +1,28 @@
+.marquee-container-new {
+  /*position: absolute;*/
+  /*white-space: nowrap;*/
+  will-change: transform;
+  animation: marquee-outer 18s linear infinite;
+  /* manipulate the speed of the marquee by changing "40s" line above*/
+}
+
+.second-row .marquee-container-new { 
+	animation: marquee-outer-reverse 18s linear infinite;
+}
+
+.marquees:hover .marquee-container-new {
+ -webkit-animation-play-state: paused;
+ -moz-animation-play-state: paused;
+ -o-animation-play-state: paused;
+ animation-play-state: paused;
+}
+  
+@keyframes marquee-outer {
+  0% { transform: translateX(0vw); }
+  100% { transform: translateX(-100vw); }
+}
+
+@keyframes marquee-outer-reverse {
+	0% { transform: translateX(-100vw); }
+  100% { transform: translateX(0vw); }
+}
